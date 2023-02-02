@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Dosis&family=Source+Code+Pro&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: antiquewhite;
+    font-family: 'Dosis', sans-serif;
+}
+
+nav {
+    background-color: #4a1960;
+    color: antiquewhite;
+    height: 7.75vh;
+    display: flex;
+    align-items: center; 
+    font-size: 2.87vh;   
+    font-family: 'Source Code Pro', monospace;
+    font-weight: bolder;    
+}
+
+nav ul{
+    display: flex;
+    list-style: none;
+}
+
+.logo img{
+    width: 3.45vh;
+    padding: 0 1.43vh;
+}
+
+.gameContainer{
+    display: flex;
+    justify-content: center;
+    margin-top: 11.51vh;
+}
+
+.container{
+    display: grid;
+    grid-template-rows: repeat(3,10vw);
+    grid-template-columns: repeat(3,10vw);
+    position: relative;
+}
+
+.box{
+    display: flex;
+    font-size: 8vw;
+    justify-content: center;
+    border: .29vh solid black;
+    cursor: pointer;
+}
+
+.box:hover{
+    background-color: rgb(221, 205, 236);
+}
+
+.gameInfo{
+    padding-left: 3vw;
+}
+
+.infoBox{
+    padding-top: 4vh;
+}
+
+.gifBox img{
+    padding-top: 10vh;
+    padding-left: 15vh;
+    width: 0;
+    transition: width 1s ease-in-out;
+}
+
+#resetButton{
+    cursor: pointer;
+    margin-left: 4vh;
+    background: #985cb5;
+    color: antiquewhite;
+    width: 16vh;
+    border-radius: 6vh;
+}
+
+#line{
+    width: 0;
+    height: 0.5vh;
+    background-color: rgb(131, 78, 131);
+    position: absolute;
+    left: 3vw;
+    transition: width 1s ease-in-out;    
+}
+
+/* Utility Classes */
+.bt-0{
+    border-top: 0;
+}
+.bl-0{
+    border-left: 0;
+}
+.br-0{
+    border-right: 0;
+}
+.bb-0{
+    border-bottom: 0;
+}
+
+/* Media Query */
+@media screen and (max-width: 450px) {
+    .gameContainer{
+        flex-wrap: wrap;
+    }
+    .gameInfo{
+        margin-top: 5vw;
+        font-size: 5vw;
+    }
+    .container{
+        display: grid;
+        grid-template-rows: repeat(3,20vw);
+        grid-template-columns: repeat(3,20vw);    
+    }
+
+}
